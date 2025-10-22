@@ -9,6 +9,10 @@ Aplicação web para varrer uma conta AWS e destacar riscos de segurança em ser
 - Interface web responsiva com dashboard e gráficos.
 - Docker Compose para subir backend e frontend de forma integrada.
 
+## 🖥️ Preview
+
+![CloudSec Scanner Dashboard](docs/dashboard.png)
+
 ## 🧱 Estrutura
 ```
 cloudsec-scanner/
