@@ -7,6 +7,9 @@ services:
       - "8000:8000"
     environment:
       - AWS_REGION=us-east-1
+      - DATABASE_URL=sqlite:///data/cloudsec.db
+    volumes:
+      - backend-data:/app/data
   frontend:
     build: ./frontend
     container_name: cloudsec-frontend
@@ -17,3 +20,6 @@ services:
       - REACT_APP_API_URL=http://backend:8000
     depends_on:
       - backend
+
+volumes:
+  backend-data:

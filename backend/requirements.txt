@@ -4,3 +4,4 @@ boto3
 pydantic
 reportlab
 python-dotenv
+sqlmodel

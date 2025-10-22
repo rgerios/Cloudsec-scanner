@@ -6,7 +6,7 @@ const Header = () => (
         <p className="text-sm text-slate-400">Avaliação de segurança contínua da sua conta AWS</p>
       </div>
       <span className="rounded-full border border-emerald-500/60 bg-emerald-500/10 px-3 py-1 text-sm text-emerald-300">
-        Beta
+        Beta · v1.2
       </span>
     </div>
   </header>
