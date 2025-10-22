@@ -4,7 +4,7 @@ Aplicação web para varrer uma conta AWS e destacar riscos de segurança em ser
 
 ## ✨ Funcionalidades
 - Score de segurança calculado a partir da severidade dos findings (High, Medium, Low).
-- Categorias avaliadas: IAM, S3, CloudTrail, Network (Security Groups) e KMS.
+- Categorias avaliadas: IAM, S3, CloudTrail, Network (Security Groups), KMS, EC2 e RDS.
 - Exportação do último scan em PDF.
 - Interface web responsiva com dashboard e gráficos.
 - Docker Compose para subir backend e frontend de forma integrada.

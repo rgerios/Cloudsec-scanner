@@ -9,7 +9,15 @@ from fastapi.responses import FileResponse
 from pydantic import BaseModel
 
 from reports.pdf_generator import generate_pdf
-from services import cloudtrail_check, iam_check, kms_check, network_check, s3_check
+from services import (
+    cloudtrail_check,
+    ec2_check,
+    iam_check,
+    kms_check,
+    network_check,
+    rds_check,
+    s3_check,
+)
 
 logging.basicConfig(level=os.environ.get("LOG_LEVEL", "INFO"))
 logger = logging.getLogger(__name__)
@@ -42,6 +50,8 @@ def run_scan(request: ScanRequest) -> Dict:
         cloudtrail_check.check_trail,
         network_check.check_sg,
         kms_check.check_kms,
+        ec2_check.check_ec2,
+        rds_check.check_rds,
     ]
 
     findings: List[Dict] = []
