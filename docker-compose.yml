@@ -1,0 +1,19 @@
+version: "3.8"
+services:
+  backend:
+    build: ./backend
+    container_name: cloudsec-backend
+    ports:
+      - "8000:8000"
+    environment:
+      - AWS_REGION=us-east-1
+  frontend:
+    build: ./frontend
+    container_name: cloudsec-frontend
+    ports:
+      - "3000:3000"
+    environment:
+      - VITE_API_URL=http://backend:8000
+      - REACT_APP_API_URL=http://backend:8000
+    depends_on:
+      - backend
